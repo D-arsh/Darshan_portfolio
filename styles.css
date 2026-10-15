@@ -230,9 +230,6 @@ h1, h2, h3 { text-wrap: balance; }
 .output-metrics small { color: #9f9ba8; font-size: 6px; }
 .output-message { margin-top: 8px; color: #b9b4c0; font-size: 7px; }
 .testify-visual .demo-disclaimer { color: rgba(255,255,255,.55); text-align: right; }
-.testify-team-photo { position: absolute; z-index: 4; right: 4%; bottom: 18px; width: 128px; margin: 0; padding: 6px; transform: rotate(3deg); background: var(--paper-raised); box-shadow: 0 12px 26px rgba(82, 51, 40, .22); }
-.testify-team-photo img { width: 100%; height: auto; object-fit: contain; background: var(--paper); }
-
 .journey-section { padding-top: 96px; padding-bottom: 116px; border-top: 1px solid var(--line); }
 .journey-intro { max-width: 300px; margin: 0 0 4px; }
 .journey-grid { display: grid; margin-top: 33px; grid-template-columns: .9fr 1.1fr; gap: 18px; }
@@ -411,7 +408,6 @@ html[data-theme="dark"] .dock-nav a.is-active .dock-dot { background: #20211f; }
   .tag-list { margin-bottom: 17px; }
   .scan-console { width: 88%; }
   .testify-window { width: 91%; }
-  .testify-team-photo { right: 5%; bottom: 13px; width: 92px; padding: 4px; }
   .testify-body { min-height: 304px; grid-template-columns: 33px 1fr; }
   .testify-main { padding: 16px 10px 10px; }
   .testify-main h3 { font-size: 16px; }
