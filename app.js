@@ -24,34 +24,6 @@
     try { window.localStorage.setItem('darshan-portfolio-theme', root.dataset.theme); } catch (_) { /* optional preference */ }
   });
 
-  const photoSlides = Array.from(document.querySelectorAll('.portrait-slide'));
-  const photoDots = Array.from(document.querySelectorAll('[data-photo]'));
-  const photoCount = document.querySelector('.portrait-count');
-  let activePhoto = 0;
-  document.querySelectorAll('.photo-frame img').forEach((image) => {
-    const markLoaded = () => {
-      image.closest('.photo-frame').dataset.ready = image.naturalWidth > 0 ? 'true' : 'false';
-    };
-    image.addEventListener('load', markLoaded);
-    image.addEventListener('error', () => { image.closest('.photo-frame').dataset.ready = 'false'; });
-    if (image.complete) markLoaded();
-  });
-  const showPhoto = (index) => {
-    activePhoto = (index + photoSlides.length) % photoSlides.length;
-    photoSlides.forEach((slide, i) => {
-      slide.hidden = i !== activePhoto;
-      slide.classList.toggle('is-active', i === activePhoto);
-    });
-    photoDots.forEach((dot, i) => {
-      if (i === activePhoto) dot.setAttribute('aria-current', 'true');
-      else dot.removeAttribute('aria-current');
-    });
-    photoCount.textContent = `${String(activePhoto + 1).padStart(2, '0')} / ${String(photoSlides.length).padStart(2, '0')}`;
-  };
-  document.querySelector('.photo-prev').addEventListener('click', () => showPhoto(activePhoto - 1));
-  document.querySelector('.photo-next').addEventListener('click', () => showPhoto(activePhoto + 1));
-  photoDots.forEach((dot) => dot.addEventListener('click', () => showPhoto(Number(dot.dataset.photo))));
-
   const track = document.querySelector('.project-track');
   const cards = Array.from(document.querySelectorAll('.project-card'));
   const railCount = document.querySelector('.rail-count b');

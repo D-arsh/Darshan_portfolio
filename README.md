@@ -1,28 +1,15 @@
-# Darshan Thube portfolio
+# Darshan Thube
 
-A responsive, dependency-free portfolio website. It runs as a static site and can be opened directly from `index.html` or served locally.
+AI & Data Science graduate building practical software across healthcare, medical imaging, and agentic systems.
 
-## Photo gallery
+Studying B.Tech in Artificial Intelligence & Data Science at AISSMS Institute of Information Technology, Pune (2022–2026).
 
-The gallery uses the four supplied photos in `images/`:
+Microsoft Certified: Azure Fundamentals (AZ-900).
 
-- `photo-1.jpg` - graduation portrait
-- `photo-2.png` - team workspace
-- `photo-3.jpeg` - AI Agent Hackathon team
-- `photo-4.jpeg` - ISB&M award group
+1st Runner-Up at the B.L.I.T.Z. Hackathon, ISB&M Pune. Recognized for Most Innovative Use Case at the QA Fraternity AI Agent Hackathon 2026 as part of Team Kiwi.
 
-To replace one, keep the same filename and format or update its image path in `index.html`.
+Outside the classroom, I enjoy building useful tools and exploring how AI can make complex workflows easier to use.
 
-## Run locally
+---
 
-From this folder, run `python -m http.server 5173` and open `http://localhost:5173`.
-
-## Deploy
-
-Deploy this folder as a static site. No build step or package installation is required.
-
-## Portfolio notes
-
-- The project showcases are front-end interactions with clearly labeled sample data. They do not connect to the CURA-ID or Testify backends, classify a real MRI, or send a load test to JMeter.
-- The resume's ADAPT live-demo URL opens a site branded to another team. This portfolio omits that URL. Replace the GitHub profile link on the ADAPT card with the project repository, if you have the correct link.
-- Internship experience and a resume download link are not included.
+[LinkedIn](https://linkedin.com/in/darshan-thube) · [GitHub](https://github.com/D-arsh) · [Email](mailto:darshanthube8@gmail.com)
