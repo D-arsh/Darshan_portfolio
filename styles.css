@@ -90,10 +90,6 @@ h1, h2, h3 { text-wrap: balance; }
 .text-link:hover, .text-link:focus-visible { transform: translateY(-2px); border-color: var(--green-deep); color: var(--green-deep); }
 .text-link span { display: inline-block; margin-left: 6px; transition: transform .18s ease; }
 .text-link:hover span, .text-link:focus-visible span { transform: translate(2px, -2px); }
-.hero-facts { display: flex; gap: clamp(24px, 4vw, 49px); margin-top: 72px; }
-.hero-facts div { display: flex; flex-direction: column; gap: 2px; }
-.hero-facts strong { font-size: 20px; font-weight: 720; letter-spacing: -.045em; }
-.hero-facts span { color: var(--muted); font-size: 10px; }
 .hero-photo { position: relative; width: 100%; max-width: 360px; justify-self: end; margin: 0; padding: 10px; transform: rotate(1.2deg); background: var(--paper-raised); box-shadow: var(--shadow); }
 .hero-photo img { width: 100%; aspect-ratio: 4 / 5; object-fit: cover; object-position: center 37%; }
 .round-button { display: grid; width: 38px; height: 38px; flex: 0 0 auto; place-items: center; padding: 0; border: 1px solid var(--line); border-radius: 50%; background: transparent; cursor: pointer; font-size: 17px; transition: color .18s, background .18s, border-color .18s, transform .18s; }
@@ -331,7 +327,6 @@ html[data-theme="dark"] .dock-nav a.is-active .dock-dot { background: #20211f; }
   .theme-toggle { width: 38px; height: 38px; justify-content: center; padding: 0; }
   .hero { min-height: 570px; padding-top: 54px; grid-template-columns: minmax(0, 1fr) minmax(220px, .72fr); gap: 28px; }
   .hero h1 { font-size: clamp(44px, 7vw, 62px); }
-  .hero-facts { gap: 18px; margin-top: 44px; }
   .project-rail { margin-right: calc((100% - min(720px, 100%)) / -2); }
   .project-track { padding-right: 24px; }
   .project-card { min-width: min(870px, calc(100vw - 72px)); grid-template-columns: minmax(0, 1fr) minmax(275px, .76fr); }
@@ -365,9 +360,6 @@ html[data-theme="dark"] .dock-nav a.is-active .dock-dot { background: #20211f; }
   .hero-actions { gap: 19px; }
   .button { min-height: 44px; padding-inline: 13px; gap: 11px; font-size: 10px; }
   .text-link { font-size: 10px; }
-  .hero-facts { justify-content: space-between; gap: 10px; margin-top: 32px; }
-  .hero-facts strong { font-size: 16px; }
-  .hero-facts span { font-size: 8px; }
   .hero-photo { width: min(100%, 360px); align-self: center; }
   .scroll-cue { right: 0; bottom: 25px; font-size: 8px; }
   .scroll-line { width: 27px; }
