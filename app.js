@@ -24,6 +24,35 @@
     try { window.localStorage.setItem('darshan-portfolio-theme', root.dataset.theme); } catch (_) { /* optional preference */ }
   });
 
+  const heroPhoto = document.querySelector('.hero-photo-image');
+  const heroPhotoCount = document.querySelector('.hero-photo-count b');
+  const heroPhotoCaption = document.querySelector('.hero-photo-caption');
+  const heroPhotos = [
+    { src: 'images/photo-1.jpg', alt: 'Darshan Thube at his graduation, holding his certificate', caption: 'Graduation day', position: 'center 37%' },
+    { src: 'images/photo-2.png', alt: 'Darshan and teammates working together in a shared workspace', caption: 'Building with the team', position: 'left center' },
+    { src: 'images/photo-3.jpeg', alt: 'Darshan with his teammates at the AI Agent Hackathon', caption: 'AI Agent Hackathon', position: '70% center' },
+    { src: 'images/photo-4.jpeg', alt: 'Darshan and fellow finalists receiving competition certificates', caption: 'Competition day', position: 'left center' },
+  ];
+  let activeHeroPhoto = 0;
+  const setHeroPhoto = (offset) => {
+    activeHeroPhoto = (activeHeroPhoto + offset + heroPhotos.length) % heroPhotos.length;
+    const photo = heroPhotos[activeHeroPhoto];
+    heroPhoto.classList.add('is-changing');
+    heroPhotoCount.textContent = String(activeHeroPhoto + 1).padStart(2, '0');
+    heroPhotoCaption.textContent = photo.caption;
+    const preload = new Image();
+    preload.onload = () => {
+      heroPhoto.src = photo.src;
+      heroPhoto.alt = photo.alt;
+      heroPhoto.style.objectPosition = photo.position;
+      window.requestAnimationFrame(() => heroPhoto.classList.remove('is-changing'));
+    };
+    preload.onerror = () => heroPhoto.classList.remove('is-changing');
+    preload.src = photo.src;
+  };
+  document.querySelector('.hero-photo-prev').addEventListener('click', () => setHeroPhoto(-1));
+  document.querySelector('.hero-photo-next').addEventListener('click', () => setHeroPhoto(1));
+
   const track = document.querySelector('.project-track');
   const cards = Array.from(document.querySelectorAll('.project-card'));
   const railCount = document.querySelector('.rail-count b');
